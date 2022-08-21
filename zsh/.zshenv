@@ -5,3 +5,4 @@ export ZSH=$ZDOTDIR
 
 # user variables
 export BROWSER=firefox
+export GTK_THEME=Adwaita:dark
