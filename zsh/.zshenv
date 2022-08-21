@@ -1,7 +1,13 @@
+# xdg base directory variables
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_STATE_HOME=$HOME/.local/state
+
 # set ZDOTDIR (don't forget to create a symlink to this file from m ~/.zshenv 
 # this is unfortunately the best practice even though I hate it)
-export ZDOTDIR=~/.config/zsh
-export ZSH=~/.config/oh-my-zsh
+export ZDOTDIR=$XDG_CONFIG_HOME/zsh
+export ZSH=$XDG_CONFIG_HOME/oh-my-zsh
 
 # user variables
 export BROWSER=firefox
