@@ -2,3 +2,6 @@
 # this is unfortunately the best practice even though I hate it)
 export ZDOTDIR=~/.config/zsh
 export ZSH=$ZDOTDIR
+
+# user variables
+export BROWSER=firefox
