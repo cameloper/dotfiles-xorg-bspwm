@@ -9,6 +9,9 @@ export XDG_STATE_HOME=$HOME/.local/state
 export ZDOTDIR=$XDG_CONFIG_HOME/zsh
 export ZSH=$XDG_CONFIG_HOME/oh-my-zsh
 
+# user bin directory for npm
+export PATH=$PATH:$HOME/node_modules/.bin
+
 # user variables
 export BROWSER=firefox
 # Preferred editor for local and remote sessions
@@ -17,3 +20,20 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='nvim'
 fi
+
+zshcache_time="$(date +%s%N)"
+
+autoload -Uz add-zsh-hook
+
+rehash_precmd() {
+  if [[ -a /var/cache/zsh/pacman ]]; then
+    local paccache_time="$(date -r /var/cache/zsh/pacman +%s%N)"
+    if (( zshcache_time < paccache_time )); then
+      rehash
+      zshcache_time="$paccache_time"
+    fi
+  fi
+}
+
+add-zsh-hook -Uz precmd rehash_precmd
+
