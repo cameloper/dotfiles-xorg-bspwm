@@ -42,6 +42,30 @@ super + alt + x
 {_, shift + }XF86MonBrightnessUp
 	xbacklight -inc {10,5}
 
+# hue lights off / bri down
+super + {_, shift} + XF86MonBrightnessDown
+	hueadm light 3 {off, -10%}
+
+# hue lights on / bri up
+super + {_, shift} + XF86MonBrightnessUp
+	hueadm light 3 {on, +10%}
+
+# mute main sink
+XF86AudioMute
+	pulsemixer --toggle-mute
+
+# lower volume of main sink
+{_, shift} + XF86AudioLowerVolume
+	pulsemixer {--change-volume -10, --change-volume -5}
+
+# raise volume of main sink
+XF86AudioRaiseVolume + {_, shift}
+	pulsemixer --change-volume {10, 5}
+
+# mute main source
+XF86AudioMicMute
+	pulsemixer --id source-1 --toggle-mute
+
 #
 # bspwm hotkeys
 #
