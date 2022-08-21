@@ -31,8 +31,8 @@ super + alt + x
 # 	lf
 
 # TODO print screen
-# Print
-# 	COMMAND
+Print
+  maim -s -u | xclip -selection clipboard -t image/png -i
 
 # Decrease backlight
 {_, shift + }XF86MonBrightnessDown
