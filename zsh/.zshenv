@@ -11,6 +11,8 @@ export ZSH=$XDG_CONFIG_HOME/oh-my-zsh
 
 # user bin directory for npm
 export PATH=$PATH:$HOME/node_modules/.bin
+# user bin directory for appimage
+export PATH=$PATH:$HOME/appimage
 
 # user variables
 export BROWSER=firefox

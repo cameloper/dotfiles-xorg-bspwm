@@ -6,10 +6,6 @@
 super + Return
 	alacritty
 
-# program launcher
-super + @space
-	dmenu_run
-
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -25,6 +21,11 @@ super + ctrl + shift + k
 # lock using lightdm
 super + alt + x
 	dm-tool lock
+
+# run rofi
+# TODO: set up config, this is only temporary
+super + @space
+  rofi -show drun
 
 # TODO launch file manager
 # super + r
