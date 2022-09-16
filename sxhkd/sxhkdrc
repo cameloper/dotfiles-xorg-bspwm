@@ -28,8 +28,8 @@ super + @space
   rofi -show drun
 
 # TODO launch file manager
-# super + r
-# 	lf
+super + r
+  alacritty -e lf
 
 # TODO print screen
 Print
