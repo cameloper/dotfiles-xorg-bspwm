@@ -27,7 +27,6 @@ super + alt + x
 super + @space
   rofi -show drun
 
-# TODO launch file manager
 super + r
   alacritty -e lf
 
@@ -51,6 +50,10 @@ super + {_, shift} + XF86MonBrightnessDown
 super + {_, shift} + XF86MonBrightnessUp
 	hueadm light 3 {on, +10%}
 
+#
+# Audio and player control
+#
+
 # mute main sink
 XF86AudioMute
 	pulsemixer --toggle-mute
@@ -66,6 +69,18 @@ XF86AudioRaiseVolume + {_, shift}
 # mute main source
 XF86AudioMicMute
 	pulsemixer --id source-1 --toggle-mute
+
+# play/pause
+super + n
+  playerctl play-pause
+
+# previous
+super + b
+  playerctl previous
+
+# next
+super + m
+  playerctl next
 
 #
 # bspwm hotkeys
