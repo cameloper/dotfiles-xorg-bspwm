@@ -70,6 +70,14 @@ XF86AudioRaiseVolume + {_, shift}
 XF86AudioMicMute
 	pulsemixer --id source-1 --toggle-mute
 
+# media keys (for external keyboards and headsets)
+
+XF86AudioPlay
+  playerctl play
+
+XF86AudioPause
+  playerctl pause
+
 # play/pause
 super + n
   playerctl play-pause
