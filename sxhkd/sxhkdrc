@@ -27,6 +27,10 @@ super + alt + x
 super + @space
   rofi -show drun
 
+# run 
+super + x
+  rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+
 super + r
   alacritty -e lf
 
