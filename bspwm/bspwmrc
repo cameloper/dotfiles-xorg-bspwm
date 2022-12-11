@@ -5,7 +5,7 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 picom -b &
 feh --bg-fill ~/background.png --no-fehbg &
 polybar --reload default &
-greenclip daemon &
+~/.config/autostart.sh &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
