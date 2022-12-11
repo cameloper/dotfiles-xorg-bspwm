@@ -98,9 +98,9 @@ super + m
 # bspwm hotkeys
 #
 
-# quit/restart bspwm
+# quit Xsession/restart bspwm
 super + alt + {q,r}
-	bspc {quit,wm -r}
+	{pkill Xsession,bspc wm -r}
 
 # close and kill
 super + {_,shift + }q
