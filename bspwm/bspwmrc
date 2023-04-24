@@ -3,9 +3,8 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 picom -b &
-feh --bg-fill ~/background.png --no-fehbg &
+feh --bg-fill ~/wallpaper --no-fehbg &
 polybar --reload default &
-~/.config/autostart.sh &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
@@ -17,4 +16,5 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 bspc rule -a Zathura state=tiled
+
 
