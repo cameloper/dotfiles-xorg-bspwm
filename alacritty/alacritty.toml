@@ -1,0 +1,20 @@
+[env]
+TERM = "alacritty"
+dynamic_title = "true"
+opacity = "0.7"
+
+[font.bold]
+family = "DejaVuSansM Nerd Font Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "DejaVuSansM Nerd Font Mono"
+style = "Bold Oblique"
+
+[font.italic]
+family = "DejaVuSansM Nerd Font Mono"
+style = "Oblique"
+
+[font.normal]
+family = "DejaVuSansM Nerd Font Mono"
+style = "Regular"

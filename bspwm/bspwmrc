@@ -3,8 +3,16 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 picom -b &
+lxqt-policykit-agent &
 feh --bg-fill ~/wallpaper --no-fehbg &
 polybar --reload default &
+greenclip daemon &
+
+#check if udiskie is already running
+udiskie_pid=$(pidof -w udiskie);
+if [[ -z "$udiskie_pid" ]]; then
+  udiskie -s &
+fi
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
